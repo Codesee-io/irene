@@ -123,14 +123,15 @@
                 = fa-icon "download"
                 | &nbsp; #{ t "pdfReport"}
             else
-              button.mp-pdf-report click="getPDFReportLink" disabled=isDownloadingReport
-                if isDownloadingReport
-                  .fa-font-size
-                    i.fa class="fa-spinner fa-spin"
-                    | &nbsp;
-                else
-                  = fa-icon "download"
-                | &nbsp; #{ t "pdfReport"}
+              // button.mp-pdf-report click="getPDFReportLink" disabled=isDownloadingReport
+              //   if isDownloadingReport
+              //     .fa-font-size
+              //       i.fa class="fa-spinner fa-spin"
+              //       | &nbsp;
+              //   else
+              //     = fa-icon "download"
+              //   | &nbsp; #{ t "pdfReport"}
+              = file/report-btn file=file showCopyPasswordModal=(action "onShowPasswordModal")
   .card-content
     if isScanDetails
       .columns
@@ -401,7 +402,7 @@
       button.modal-button.is-primary click="closeRescanModal"
         = t "no"
 
-= modal-card isActive=showCopyPasswordModal title=(t "modalCard.copyPassword.title") class="copy-password-modal"
-  = copy-password pdfPassword=file.project.pdfPassword
+// = modal-card isActive=showCopyPasswordModal title=(t "modalCard.copyPassword.title") class="copy-password-modal"
+//   = copy-password pdfPassword=file.project.pdfPassword
 
 = confirm-box isActive=showRemoveRoleConfirmBox title=(t "confirmBox.removeUserRole") delegate=this

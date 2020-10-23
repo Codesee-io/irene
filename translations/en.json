@@ -744,5 +744,19 @@
     "selectGHRepo": "Select the Github Repo where you want us to create issues for the risks we find in your project",
     "selectJIRAAccount": "Select the JIRA account where you want us to create issues for the risks we find in your project",
     "selectPreferredDevice": "Select the Preferred Device Type and OS Version for Dynamic Scan"
-  }
+  },
+  "report": {
+    "generating": "Generating Report",
+    "generated": "Download Report",
+    "generate": "Generate Report",
+    "not_started": "Generate Report",
+    "errored": "Generate Report",
+    "downloadUrlNotFound": "Couldn't download the report!",
+    "downloadExcel": "Download Excel Report",
+    "generateSuccess": "Report generated successfully",
+    "sendTo": "and sent to following Email IDS:",
+    "genreateError": "Problem while generating report, please try again!"
+  },
+  "generatedOn": "Generated On"
+
 }

@@ -3,4 +3,18 @@ const CONSTANTS = {
   WINDOWS_STORE_URL_RE: /microsoft.com(.*)store\/p\/(.*)\/(.*)/
 };
 
+export const REPORT = {
+  MAX_LIMIT: 2,
+  STATUS: {
+    GENERATING: 'Generating',
+    GENERATED: 'Generated',
+    GENERATE: 'Generate'
+  },
+  TYPE: {
+    PDF: 'pdf',
+    EXCEL: 'xlsx',
+    JSON: 'json'
+  }
+}
+
 export default CONSTANTS;
