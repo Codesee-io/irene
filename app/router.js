@@ -3,10 +3,10 @@ import config from './config/environment';
 import ENV from 'irene/config/environment';
 import $ from 'jquery';
 
-const Router = EmberRouter.extend({
-  location: config.locationType,
-  rootURL: config.rootURL
-});
+export default class Router extends EmberRouter {
+  location = config.locationType;
+  rootURL = config.rootURL;
+}
 
 $('body').addClass('theme-' + ENV.whitelabel.theme);
 
@@ -71,7 +71,7 @@ Router.map(function() {
   this.route('status');
 });
 
-const CSBMap = {
+export const CSBMap = {
   "authenticated.projects": ENV.csb.navigateToProjects,
   "authenticated.analytics": ENV.csb.navigateToAnalytics,
   "authenticated.file": ENV.csb.clickProjectCard,
@@ -84,6 +84,3 @@ const CSBMap = {
   "authenticated.marketplace": ENV.csb.navigateToMarketPlace,
   "authenticated.billing": ENV.csb.navigateToBilling
 };
-
-
-export { Router as default, CSBMap as CSBMap};
