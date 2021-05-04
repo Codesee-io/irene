@@ -789,5 +789,14 @@
       "triggerSuccess": "Cleanup initiated!",
       "triggerError": "Problem with trigger"
     }
+  },
+  "whitelistEmailDomain": {
+    "title": "Whitelisted Email Domains",
+    "delete": "Delete Domain",
+    "subDesc": "Email domains which are allowed to invite and or register organization members",
+    "add": "Add domain",
+    "remove": "Remove Domain",
+    "added": "added successfully",
+    "deleted": "Domain Deleted"
   }
 }
