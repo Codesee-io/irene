@@ -49,12 +49,17 @@ function routes() {
   this.get('/plans', 'plan');
   this.get('/pricings/:id', 'pricing');
   this.get('/teams', 'team');
-  this.get('/organizations', 'organization');
+  this.get('/organizations', (schema) => {
+    return schema.organizations.all().models;
+  });
   this.get('/teams/:id', 'team');
   this.get('/submissions/:id', 'submission');
   this.get('/submissions', 'submission');
   this.get('/files/:id', 'file');
   this.get('/vulnerabilities/:id', 'vulnerability');
+  this.get('/vulnerabilities', (schema) => {
+    return schema.vulnerabilities.all().models;
+  })
   this.get('/invitations/:id', 'invitation');
   this.get('/devices', 'device');
   this.get('/invoices', 'invoice');
@@ -326,5 +331,18 @@ function routes() {
 
   this.get('/example/download_url', () => {
     return {};
+  });
+
+  this.get('/organizations/:id/me', () => {
+    return {
+      id: 1,
+      is_admin: true,
+      is_owner: true,
+      is_member: false
+    }
+  })
+
+  this.get('/organizations/:id/email_domains', (schema) => {
+    return schema.organizationEmailDomains.all().models;
   });
 }
